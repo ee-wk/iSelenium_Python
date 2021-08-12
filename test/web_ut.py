@@ -26,7 +26,7 @@ class ISelenium(unittest.TestCase):
         config = self.get_config()
 
         # 控制是否采用无界面形式运行自动化测试
-        print(os.environ["using_headless"])
+        print(os.environ.get("using_headless"))
 
         try:
             using_headless = os.environ["using_headless"]
