@@ -26,9 +26,10 @@ class ISelenium(unittest.TestCase):
         config = self.get_config()
 
         # 控制是否采用无界面形式运行自动化测试
+        print(os.environ["using_headless"])
+
         try:
             using_headless = os.environ["using_headless"]
-            print(using_headless)
         except KeyError:
             using_headless = None
             print('没有配置环境变量 using_headless, 按照有界面方式运行自动化测试')
